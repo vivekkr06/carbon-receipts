@@ -361,9 +361,9 @@ html,body{overflow-x:clip}
 
 <header class="wrap hero" id="top">
   <div>
-    <p class="kicker">An AI agent that shows its working</p>
+    <p class="kicker">Deterministic fact-checking for national emissions claims</p>
     <h1>Is that emissions claim true?</h1>
-    <p class="sub">Paste something you read about a country's CO₂. The agent checks it against Our World in Data, gives a ruling, and every number it quotes is verified before you see it.</p>
+    <p class="sub">Cross-reference climate claims against Our World in Data. The agent breaks claims down into testable assertions, queries localized ground values, and programmatically audits every cited metric before rendering an assessment.</p>
     <form class="ask" id="askForm">
       <label for="claim" class="sr" style="position:absolute;left:-9999px">Your claim</label>
       <textarea id="claim" rows="2" maxlength="400" placeholder="e.g. The UK has roughly halved its CO₂ emissions since 1990"></textarea>
@@ -383,7 +383,7 @@ html,body{overflow-x:clip}
     <div class="sec-head">
       <p class="kicker" style="color:var(--sky)">The data behind every ruling</p>
       <h2>Where the data comes from, and what it shows</h2>
-      <p class="lead">The agent can only see what's in this data: <span data-nc></span> countries and 9 regions, 1990 to 2024. Explore the map, search for any place, then compare places over time in the chart.</p>
+      <p class="lead">The agent operates in a strictly closed-domain environment. It executes deterministic tool calls across <span data-nc></span> countries and 9 regions, 1990 to 2024. Explore the map, search for any place, then compare places over time in the chart.</p>
     </div>
     <div class="mapcard" id="mapcard">
       <div class="map-head">
@@ -440,14 +440,14 @@ html,body{overflow-x:clip}
 
 <footer id="about">
   <div class="wrap">
-    <div>
-      <h3>Built by Vivek Kumar</h3>
-      <p>Product lead for energy-trading platforms, building agentic AI in public. Carbon Receipts turns a public dataset into answers you can verify: every number it quotes is checked before you see it.</p>
+   <div>
+      <p><strong>Built by Vivek Kumar</strong></p>
+      <p>Product Lead specializing in energy platforms and deterministic AI systems. Carbon Receipts is an open-source reference implementation of an evaluation-driven agent pipeline—every cited metric is programmatically verified against ground truth before rendering.</p>
       <p><a id="liLink" href="#" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
-    </div>
-    <div>
-      <p><b>Data.</b> <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data, CO₂ and greenhouse gas emissions</a> (Global Carbon Project and others), CC BY 4.0. Snapshot of <span data-nc></span> countries and 9 regions, 1990–2024. Territorial fossil CO₂ unless stated.</p>
-      <p><b>Model.</b> Runs on Claude. The agent has no internet access; it sees only the snapshot through a handful of lookup tools.</p>
+   </div>
+     <div>
+      <p><b>Data.</b> <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data, CO₂ and greenhouse gas emissions</a> (Global Carbon Project and others), CC BY 4.0. Curated baseline of <span data-nc></span> countries and 9 regions, 1990–2024. Territorial fossil CO₂ unless specified.</p>
+      <p><b>Model.</b> Powered by Claude within a sandboxed environment. The agent operates strictly through deterministic retrieval tools and programmatic output schemas.</p>
     </div>
   </div>
 </footer>
