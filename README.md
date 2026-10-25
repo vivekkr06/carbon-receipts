@@ -11,13 +11,13 @@ Carbon Receipts cross-references public climate claims against a curated baselin
 
 This project implements an end-to-end agentic workflow:
 
-1. **Define the Job:** Input claim → Output structured verdict (`Verified`, `Refuted`, `Misleading`) with calculation traces.
-2. **Write Instructions:** Strict system prompts with few-shot domain examples (e.g., territorial vs. consumption metrics).
-3. **Give It Tools:** Deterministic lookup functions over static JSON datasets; zero hallucinated web retrievals.
+1. **Job definition:** Input claim → Output structured verdict (`Verified`, `Refuted`, `Misleading`) with calculation traces.
+2. **Instructions:** Strict system prompts with few-shot domain examples (e.g., territorial vs. consumption metrics).
+3. **Tools to work with:** Deterministic lookup functions over static JSON datasets; zero hallucinated web retrievals.
 4. **Control the Loop:** Bounded execution capped at 6 model turns and strict output token limits.
-5. **Add Memory & Cache:** Caching of verified responses in Netlify Blobs to reduce redundant compute.
-6. **Set Guardrails:** Closed-domain sandbox rejecting unsupported years, out-of-scope entities, or unbounded extrapolation.
-7. **Check the Result:** Programmatic verifier auditing all cited figures against raw data records prior to client streaming.
+5. **Adding Memory & Cache:** Caching of verified responses in Netlify Blobs to reduce redundant compute.
+6. **Setting Guardrails:** Closed-domain sandbox rejecting unsupported years, out-of-scope entities, or unbounded extrapolation.
+7. **Check Result:** Programmatic verifier auditing all cited figures against raw data records prior to client streaming.
 8. **Build a Golden Dataset:** Pre-computed test assertions across edge cases (missing historical points, small territories).
 9. **Run Continuous Evals:** Dynamic scorecard testing accuracy, tool selection, and citation integrity across updates.
 
