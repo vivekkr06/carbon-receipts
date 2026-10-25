@@ -363,7 +363,7 @@ html,body{overflow-x:clip}
   <div>
     <p class="kicker">Deterministic fact-checking for national emissions claims</p>
     <h1>Is that emissions claim true?</h1>
-    <p class="sub">Cross-reference climate claims against Our World in Data. The agent breaks claims down into testable assertions, queries localized ground values, and programmatically audits every cited metric before rendering an assessment.</p>
+    <p class="sub">Cross-reference climate claims against Our World in Data. The agent queries baseline numbers and programmatically audits every cited metric before showing an answer.</p>
     <form class="ask" id="askForm">
       <label for="claim" class="sr" style="position:absolute;left:-9999px">Your claim</label>
       <textarea id="claim" rows="2" maxlength="400" placeholder="e.g. The UK has roughly halved its CO₂ emissions since 1990"></textarea>
@@ -383,7 +383,7 @@ html,body{overflow-x:clip}
     <div class="sec-head">
       <p class="kicker" style="color:var(--sky)">The data behind every ruling</p>
       <h2>Where the data comes from, and what it shows</h2>
-      <p class="lead">The agent operates in a strictly closed-domain environment. It executes deterministic tool calls across <span data-nc></span> countries and 9 regions, 1990 to 2024. Explore the map, search for any place, then compare places over time in the chart.</p>
+      <p class="lead">The agent queries a fixed Our World in Data snapshot covering <span data-nc></span> countries and 9 regions (1990–2024)—no web search, no hallucinated numbers.</p>
     </div>
     <div class="mapcard" id="mapcard">
       <div class="map-head">
